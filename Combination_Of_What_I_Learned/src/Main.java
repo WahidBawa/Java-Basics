@@ -3,13 +3,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Character> chars = new ArrayList<Character>();
+        ArrayList<Character> chars = new ArrayList<>();
 //        ArrayList<Object> chars = new ArrayList<Object>(); // For all objects
         Enemy enemy = new Enemy("Zeke", 10, 125);
 //        enemy = new Enemy("Z", 12, 200); // This is for if you want to override a variable
         Player player = new Player("Yoh", 11, 150);
+        Player p1 = new Player("Amidamaru", 50, 1150);
         chars.add(enemy);
         chars.add(player);
+        chars.add(p1);
         System.out.println(chars.get(0)); // .get(int index) is for the individual items in an ArrayList
         for (Character i : chars) {
             System.out.println(i.getName());
@@ -30,9 +32,7 @@ public class Main {
                         change_name = false;
                         switch (text) {
                             default:
-                                System.out.println(chars.get(0).getName());
                                 chars.get(0).setName(text);
-                                System.out.println(chars.get(0).getName());
                         }
                     }
                     continue;
