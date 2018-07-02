@@ -13,7 +13,9 @@ public class Main {
             strings.add(line);
             System.out.println(Arrays.toString(line));
         }
-//        System.out.println(Arrays.toString(strings));
+        for (String[] i : strings){
+            System.out.println(Arrays.toString(i));
+        }
         text.close();
     }
 }
