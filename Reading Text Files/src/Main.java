@@ -1,14 +1,19 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
-        String fileName = "Text/seuss.txt";
+    public static void main(String[] args) throws FileNotFoundException{
+//        File filename = new File("C:/Users/wahid/Desktop/seuss.txt");
+        File filename = new File("src/seuss.txt");
 
-        File seuss = new File(fileName);
-
-//        Scanner in = new Scanner(seuss);
-
+        Scanner text = new Scanner(filename);
+        ArrayList<String[]> strings = new ArrayList<>();
+        while (text.hasNextLine()){
+            String[] line = text.nextLine().split(" ");
+            strings.add(line);
+            System.out.println(Arrays.toString(line));
+        }
+//        System.out.println(Arrays.toString(strings));
+        text.close();
     }
 }
